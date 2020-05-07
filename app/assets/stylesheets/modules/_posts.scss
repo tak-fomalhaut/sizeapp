@@ -1,0 +1,211 @@
+// @media screen and (min-width: 481px) {}
+// @media screen and (max-width: 480px) {}
+
+header {
+  background-color: #25b7c0;
+  width: 100%;
+  height: 12vh;
+  // line-height: 80px;
+  // text-align: center;
+
+  .header__box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .header__logo {
+      width: 12vh;
+      height: 12vh;
+      margin: 10px 0 0 10px;
+      // background-color: linen;
+      filter: brightness(0) invert(1);
+    }
+    .header__text {
+      color: white;
+      font-size: 16px;
+      margin-left: 50px;
+      margin-bottom: 10px;
+      .appname {
+        font-size: 28px;
+        font-family: 'Courier New', Courier, monospace;
+      }
+    }
+    .user__box {
+      color: white;
+      // height: 50%;
+      display: flex;
+      .sign-btn {
+        background-color: #e5a323;
+        width: 80px;
+        height: 30px;
+        font-size: 14px;
+        line-height: 30px;
+        text-align: center;
+        border-radius: 20px;
+        filter: drop-shadow(1px 1px 1px rgba(0,0,0,0.6));
+        margin-right: 15px;
+        &-link {
+          display: block;
+          text-decoration: none;
+          color: white;
+          &:hover {
+            background-color: yellowgreen;
+            border-radius: 20px;
+          }
+          
+        }
+      }
+      .login-btn {
+        background-color: #00885a;
+        width: 80px;
+        height: 30px;
+        font-size: 14px;
+        line-height: 30px;
+        text-align: center;
+        border-radius: 20px;
+        filter: drop-shadow(1px 1px 1px rgba(0,0,0,0.6));
+        margin-right: 10px;
+        &-link {
+          display: block;
+          text-decoration: none;
+          color: white;
+          &:hover {
+            background-color: yellowgreen;
+            border-radius: 20px;
+          }
+        }
+      }
+    }
+  }
+}
+
+main {
+  background-color: honeydew;
+  width: 100vw;
+  height: 80vh;
+  .main__box {
+    // width: 100vw;
+    // height: 80vh;
+    .image__box {
+      height: 60vh;
+      width: 100vw;
+      display: flex;
+      &--left {
+        // background-color: indianred;
+        width: 50vw;
+        // max-height: 100%;
+      }
+      &--right {
+        // background-color: khaki;
+        width: 50vw;
+      }
+    }
+    .btn-box {
+      height: 20vh;
+      width: 100vw;
+      display: flex;
+      align-items: center;
+      text-align: center;
+      
+      .share__box {
+        width: 50vw;
+      
+        &--btn {
+          display: block;
+          height: 70px;
+          width: 160px;
+          background-color: #25b7c0;
+          line-height: 80px;
+          text-align: center;
+          margin: 10px auto;
+          color: white;
+          text-decoration: none;
+          border-radius: 30px;
+          filter: drop-shadow(2px 2px 2px rgba(0,0,0,0.6));
+          &:hover {
+            background-color: yellowgreen;
+            border-radius: 30px;
+          }
+        }
+        &--icon {
+          color: white;
+          font-size: 1.8em;
+        }
+        &--text {
+          color: #6f5436;
+          font-size: 14px;
+        }
+      }
+      .search__box {
+        width: 50vw;
+        &--btn {
+          display: block;
+          height: 70px;
+          width: 160px;
+          background-color: #25b7c0;
+          line-height: 80px;
+          text-align: center;
+          margin: 10px auto;
+          color: white;
+          text-decoration: none;
+          border-radius: 30px;
+          filter: drop-shadow(2px 2px 2px rgba(0,0,0,0.6));
+          &:hover {
+            background-color: yellowgreen;
+            border-radius: 30px;
+          }
+        }
+        &--icon {
+          color: white;
+          font-size: 1.8em;
+        }
+        &--text {
+          color: #6f5436;
+          font-size: 14px;
+        }
+      }
+    }
+  }
+}
+
+footer {
+  background-color: #c9caca;
+  width: 100%;
+  height: 8vh;
+  color: white;
+  .footer__box {
+    display: flex;
+    .icons {
+      display: flex;
+      width: 33vw;
+      height: 8px;
+      line-height: 8px;
+      .twitter {
+        margin: 15px 10px;
+        font-size: 1.8em;
+        color: white;
+      }
+      .instagram {
+        margin: 15px 10px;
+        font-size: 1.8em;
+        color: white;
+      }
+      .facebook {
+        margin: 15px 10px;
+        font-size: 1.8em;
+        color: white;
+      }
+    }
+    .footer-logo {
+      width: 34vw;
+      text-align: center;
+      line-height: 8vh;
+      font-size: 12px;
+    }
+    .footer-text {
+      width: 33vw;
+      text-align: end;
+      line-height: 8vh;
+      font-size: 12px;
+    }
+  }
+}
