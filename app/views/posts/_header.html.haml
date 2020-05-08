@@ -7,9 +7,19 @@
       .appname 
         JustMe &.
     .user__box
-      .sign-btn
-        = link_to "#", class: "sign-btn-link" do
-          Sign In
-      .login-btn
-        = link_to "#", class: "login-btn-link" do
-          Log In
+      -if user_signed_in?
+        .sign-btn
+          = link_to edit_user_path(current_user), class: "login-btn-link" do
+            = current_user.name
+        .login-btn
+          = link_to destroy_user_session_path, method: :delete, class: "login-btn-link" do
+            Log Out
+      -else
+        .sign-btn
+          = link_to new_user_registration_path, class: "sign-btn-link" do
+            Sign In
+        .login-btn
+          = link_to new_user_session_path, class: "login-btn-link" do
+            Log In
+      
+
