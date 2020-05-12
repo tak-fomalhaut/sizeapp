@@ -1,0 +1,14 @@
+%content
+  .content__box
+    .content__details
+      = form_for @post do |f|
+        %h3
+          EDIT
+        = f.text_area :title, value: @post.title, id: "title"
+        = f.text_field :image, value: @post.image, id: "image"
+        = f.text_area :text, value: @post.text, id: "text"
+        = f.submit "SEND", id: "send-btn"
+    .right-box
+      チュートリアル
+      .right-box-image
+      jsで画像URL添付したらイメージが出る

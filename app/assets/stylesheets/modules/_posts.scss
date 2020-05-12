@@ -4,7 +4,7 @@
 header {
   background-color: #25b7c0;
   width: 100%;
-  height: 12vh;
+  height: 10vh;
   // line-height: 80px;
   // text-align: center;
 
@@ -13,8 +13,8 @@ header {
     justify-content: space-between;
     align-items: center;
     .header__logo {
-      width: 12vh;
-      height: 12vh;
+      width: 10vh;
+      height: 10vh;
       margin: 10px 0 0 10px;
       filter: brightness(0) invert(1);
     }
@@ -23,9 +23,14 @@ header {
       font-size: 16px;
       margin-left: 50px;
       margin-bottom: 10px;
+      text-align: center;
       .appname {
-        font-size: 28px;
-        font-family: 'Courier New', Courier, monospace;
+        .appname-link {
+          text-decoration: none;
+          font-size: 28px;
+          color: white;
+          font-family: 'Courier New', Courier, monospace;
+        }
       }
     }
     .user__box {
@@ -80,12 +85,12 @@ header {
 main {
   background-color: honeydew;
   width: 100vw;
-  height: 80vh;
+  height: 84vh;
   .main__box {
     // width: 100vw;
-    // height: 80vh;
+    // height: 84vh;
     .image__box {
-      height: 60vh;
+      height: 64vh;
       width: 100vw;
       display: flex;
       &--left {
@@ -169,7 +174,7 @@ main {
 footer {
   background-color: #c9caca;
   width: 100%;
-  height: 8vh;
+  height: 6vh;
   color: white;
   .footer__box {
     display: flex;
@@ -179,17 +184,17 @@ footer {
       height: 8px;
       line-height: 8px;
       .twitter {
-        margin: 15px 10px;
+        margin: 10px 8px;
         font-size: 1.8em;
         color: white;
       }
       .instagram {
-        margin: 15px 10px;
+        margin: 10px 8px;
         font-size: 1.8em;
         color: white;
       }
       .facebook {
-        margin: 15px 10px;
+        margin: 10px 8px;
         font-size: 1.8em;
         color: white;
       }
@@ -197,14 +202,225 @@ footer {
     .footer-logo {
       width: 34vw;
       text-align: center;
-      line-height: 8vh;
+      line-height: 6vh;
       font-size: 12px;
     }
     .footer-text {
       width: 33vw;
       text-align: end;
-      line-height: 8vh;
+      line-height: 6vh;
       font-size: 12px;
+    }
+  }
+}
+
+
+
+// postページ
+content {
+  // background-color: green;
+  // width: 100vw;
+  // height: 84vh;
+  .content__box {
+    width: 100vw;
+    height: 84vh;
+    background-color: honeydew;
+    display: flex;
+      // .left-box {
+      //   height: 84vh;
+      //   width: 25vw;
+        // background-color: #6f5436;
+      // }
+      .content__details {
+        height: 84vh;
+        width: 50vw;
+        margin: 0 auto;
+        form {
+          width: 50vw;
+          height: 84vh;
+          background-color: #3cb371;
+          text-align: center;
+          
+          h3 {
+            height: 5vh;
+            width: 50vw;
+            text-align: center;line-height: 5vh;
+          }
+          #title {
+            width: 46vw;
+            height: 8vh;
+            border: none;
+          }
+          #image {
+            width: 46vw;
+            height: 6vh;
+            border: none;
+          }
+          #text {
+            width: 46vw;
+            height: 55vh;
+            margin-top: 1vh;
+            border: none;
+          }
+          #send-btn {
+            background-color: #25b7c0;
+            color: white;
+            height: 5vh;
+            width: 10vw;
+            margin-top: 1vh;
+            text-decoration: none;
+            border-radius: 30px;
+            filter: drop-shadow(2px 2px 2px rgba(0,0,0,0.6));
+            &:hover {
+              background-color: yellowgreen;
+              border-radius: 30px;
+            }  
+          }
+        }
+      }
+      .right-box {
+        height: 84vh;
+        width: 50vw;
+        // background-color: yellow;
+      }    
+  }
+}
+
+
+// index、searchページ
+.search__bar {
+  height: 10vh;
+  width: 78vw;
+  // background-color: greenyellow;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  .search__bar--text {
+    margin: 0 auto;
+    .search-input {
+      height: 8vh;
+      width: 50vw;
+      .search-btn {
+      }
+  
+    }  
+  }
+}
+.content_search {
+  height: 74vh;
+  width: 78vw;
+  // background-color: black;
+  margin: 0 auto;
+  overflow: scroll;
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  // justify-content: space-between;
+    .search_post {
+      height: 28vh;
+      width: 12vw;
+      background-color: #3cb371;
+      margin: 10px 0 0 10px;
+      .link__group {
+        text-decoration: none;
+        color: gray;
+      }
+      .post_image {
+        height: 25vh;
+        width: 100%;
+      }
+      .post_title {
+        height: 3vh;
+        width: 12vw;
+        background-color: white;
+        font-size: 12px;
+        
+
+      }
+    }
+}
+
+// showページ
+.show {
+  .show_box {
+    width: 100vw;
+    height: 84vh;
+    background-color: #b0c4de;
+    display: flex;
+
+    .show_details {
+      height: 84vh;
+      width: 50vw;
+      // margin: 0 auto;
+
+      .show_title {
+        width: 46vw;
+        height: 8vh;
+        border: none;
+        line-height: 8vh;
+        // text-align: center;
+        background-color: white;
+        margin: 1vh auto;
+      }
+      .show_text {
+        width: 46vw;
+        height: 55vh;
+        border: none;
+        // line-height: 55vh;
+        background-color: white;
+        margin: 1vh auto;
+
+      }
+      .show_user {
+        width: 46vw;
+        height: 8vh;
+        border: none;
+        background-color: white;
+        margin: 0 auto;
+        .show_user_btns {
+          display: flex;
+          li {
+            height: 8vh;
+            width: 8vw;
+            background-color: yellow;
+          }
+          .show_user_icon {
+            background-color: #00885a;
+          }
+          .show_user_name {
+            width: 22vw;
+            background-color: #6f5436;
+          }
+          .show_edit_btn {
+            background-color: #e5a323;
+            
+            .show_edit-link {
+              text-decoration: none;
+            }
+          }
+          .show_delete_btn {
+            background-color: violet;
+            // height: 8vh;
+            // width: 8vw;
+            .show_delete-link {
+              text-decoration: none;
+            }
+          }
+        }
+      }
+      .show_comment {
+        width: 46vw;
+        height: 8vh;
+        border: none;
+        background-color: white;
+        margin: 1vh auto;
+
+      }
+    }
+    .show-image {
+      height: 84vh;
+      width: 50vw;
+
     }
   }
 }

@@ -1,0 +1,16 @@
+%content
+  .content__box
+    -# .left-box
+    -#   チュートリアル
+    .content__details
+      = form_for @post do |f|
+        %h3
+          SHARE !
+        = f.text_area :title, placeholder: "タイトルを入力", id: "title"
+        = f.text_field :image, placeholder: "Image Urlを添付", id: "image"
+        = f.text_area :text, placeholder: "コメントを入力", id: "text"
+        = f.submit "SEND", id: "send-btn"
+    .right-box
+      チュートリアル
+      .right-box-image
+      jsで画像URL添付したらイメージが出る
