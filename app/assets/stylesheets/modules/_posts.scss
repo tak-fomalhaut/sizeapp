@@ -316,29 +316,28 @@ content {
   justify-content: flex-start;
   flex-wrap: wrap;
   // justify-content: space-between;
-    .search_post {
-      height: 28vh;
-      width: 12vw;
-      background-color: #3cb371;
-      margin: 10px 0 0 10px;
-      .link__group {
-        text-decoration: none;
-        color: gray;
-      }
-      .post_image {
-        height: 25vh;
-        width: 100%;
-      }
-      .post_title {
-        height: 3vh;
-        width: 12vw;
-        background-color: white;
-        font-size: 12px;
-        
-
-      }
+  .search_post {
+    height: 28vh;
+    width: 12vw;
+    background-color: #3cb371;
+    margin: 10px 0 0 10px;
+    .link__group {
+      text-decoration: none;
+      color: gray;
     }
+    .post_image {
+      height: 25vh;
+      width: 100%;
+    }
+    .post_title {
+      height: 3vh;
+      width: 12vw;
+      background-color: white;
+      font-size: 12px;     
+    }
+  }
 }
+
 
 // showページ
 .show {
