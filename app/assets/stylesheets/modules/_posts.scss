@@ -381,28 +381,41 @@ content {
           li {
             height: 8vh;
             width: 8vw;
-            background-color: yellow;
+            // background-color: yellow;
           }
           .show_user_icon {
             background-color: #00885a;
           }
           .show_user_name {
             width: 22vw;
-            background-color: #6f5436;
+            // background-color: #6f5436;
+            .show-user-link {
+              text-decoration: none;
+              line-height: 8vh;
+              padding: 5px;
+              color: slategrey;
+            }
           }
           .show_edit_btn {
-            background-color: #e5a323;
+            // background-color: #e5a323;
             
             .show_edit-link {
               text-decoration: none;
+              line-height: 8vh;
+              padding: 5px;
+              color: slategrey;
             }
           }
           .show_delete_btn {
-            background-color: violet;
+            // background-color: violet;
             // height: 8vh;
             // width: 8vw;
             .show_delete-link {
               text-decoration: none;
+              line-height: 8vh;
+              padding: 5px;
+              color: slategrey;
+
             }
           }
         }
