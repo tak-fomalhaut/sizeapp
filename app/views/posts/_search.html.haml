@@ -1,0 +1,15 @@
+.search__bar
+  .search__bar--text
+    %input(type="text" placeholder="検索ワードを入力" class="search-input")
+      %input(type="button" value="検索" class="search-btn")
+
+%ul.content_search
+  - @posts.each do |post|
+    %li.search_post
+      = link_to post_path(post.id), method: :get, class: "link__group" do
+        .post_image
+          = image_tag post.image, width: '100%',height:'100%'
+          -# %img(src="post.image")
+        .post_title
+          = post.title
+  
