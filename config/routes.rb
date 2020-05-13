@@ -4,6 +4,9 @@ Rails.application.routes.draw do
   devise_scope :user do
     get '/users/sign_out' => 'devise/sessions#destroy'
   end
+  namespace :posts do
+    resources :searches, only: :index
+  end
   resources :posts
   resources :users, only: [:edit, :update, :show]
 end
