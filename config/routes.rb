@@ -7,6 +7,8 @@ Rails.application.routes.draw do
   namespace :posts do
     resources :searches, only: :index
   end
-  resources :posts
+  resources :posts do
+    resources :comments, only: :create
+  end
   resources :users, only: [:edit, :update, :show]
 end

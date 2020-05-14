@@ -13,5 +13,6 @@
       .right-box
         チュートリアル
         .right-box-image
-        jsで画像URL添付したらイメージが出る
+          = image_tag @post.image, width: '100%',height:'100%'
+          jsで画像URL添付したらイメージが出る
   = render "footer"

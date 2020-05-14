@@ -244,7 +244,8 @@ content {
           h3 {
             height: 5vh;
             width: 50vw;
-            text-align: center;line-height: 5vh;
+            text-align: center;
+            line-height: 5vh;
           }
           #title {
             width: 46vw;
@@ -344,12 +345,13 @@ content {
   .show_box {
     width: 100vw;
     height: 84vh;
-    background-color: #b0c4de;
+    background-color: #dcdcdc;
     display: flex;
 
     .show_details {
       height: 84vh;
       width: 50vw;
+      overflow: scroll;
       // margin: 0 auto;
 
       .show_title {
@@ -360,15 +362,16 @@ content {
         // text-align: center;
         background-color: white;
         margin: 1vh auto;
+        overflow: scroll;
       }
       .show_text {
         width: 46vw;
-        height: 55vh;
+        height: 42vh;
         border: none;
         // line-height: 55vh;
         background-color: white;
         margin: 1vh auto;
-
+        overflow: scroll;
       }
       .show_user {
         width: 46vw;
@@ -422,11 +425,37 @@ content {
       }
       .show_comment {
         width: 46vw;
-        height: 8vh;
+        height: 21vh;
         border: none;
-        background-color: white;
         margin: 1vh auto;
-
+        text-align: center;
+        .comment_text_input {
+          font-size: 14px;
+          height: 8vh;
+          width: 46vw;
+          border: none;
+        }
+        .comment_submit-btn {
+          height: 40px;
+          width: 80px;
+          margin: 0 auto;
+        }
+        .show_comments {
+          width: 46vw;
+          height: 8vh;
+          .show_comments_box {
+            text-align: left;
+            padding-bottom: 10px;
+            .comment_user-link {
+              text-decoration: none;
+              color: slategrey;
+              font-size: 14px;
+            }
+            .comment_text_show {
+              font-size: 14px;
+            }
+          }
+        }
       }
     }
     .show-image {

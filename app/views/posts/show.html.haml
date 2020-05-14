@@ -20,8 +20,17 @@
                 = link_to post_path(@post.id), method: :delete, class: "show_delete-link", data: {confirm: "本当に削除しますか？"} do
                   削除
         .show_comment
-          追記 コメントする。コメントフォーム
-          
+          = form_with model: [@post, @comment], local: true do |f|
+            = f.text_area :text, placeholder: "コメントする", rows: "2", class: "comment_text_input"
+            = f.submit "SEND", class: "comment_submit-btn"
+          .show_comments
+            -if @comments
+              -@comments.each do |comment|
+                .show_comments_box
+                  = link_to comment.user.name, "/users/#{comment.user_id}", class: "comment_user-link"
+                  .comment_text_show
+                    = comment.text
+
       .show-image
         = image_tag @post.image, width: '100%',height:'100%'
   = render "footer"
