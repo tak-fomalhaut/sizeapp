@@ -7,6 +7,11 @@
       .appname
         = link_to root_path, class: "appname-link" do
           JustMe &.
+    .user__icon
+      -if user_signed_in?
+        .user__icon--btn
+          = link_to edit_user_path(current_user) do
+            = image_tag current_user.image.url, width: '100%',height:'100%', class: "user__icon--circle"
     .user__box
       -if user_signed_in?
         .sign-btn

@@ -1,5 +1,40 @@
 .wrapper
   = render "header"
-  = render "content"
+  .show
+    .show_box
+      .show_details
+        .show_title
+          = @post.title
+        .show_text
+          = @post.text
+        .show_user
+          %ul.show_user_btns
+            %li.show_user_icon
+              = image_tag @post.user.image.url, width: '100%',height:'100%', class: "show__user--circle"
+            %li.show_user_name
+              = link_to @post.user.name, user_path(@post.user), class: "show-user-link"
+            -if user_signed_in? && current_user.id == @post.user_id
+              %li.show_edit_btn
+                = link_to edit_post_path(@post.id), class: "show_edit-link" do
+                  = icon('fas', 'edit', class: "show__edit--icon")
+              %li.show_delete_btn
+                = link_to post_path(@post.id), method: :delete, class: "show_delete-link", data: {confirm: "本当に削除しますか？"} do
+                  = icon('fas', 'trash-alt', class: "show__delete--icon")
+        .show_comment
+          = form_with model: [@post, @comment], local: true do |f|
+            = f.text_area :text, placeholder: "コメントする", rows: "2", class: "comment_text_input"
+            = f.submit "SEND", class: "comment_submit-btn"
+          .show_comments
+            -if @comments
+              -@comments.each do |comment|
+                .show_comments_box
+                  = link_to comment.user.name, "/users/#{comment.user_id}", class: "comment_user-link"
+                  .comment_text_show
+                    = comment.text
+            -# -elsif @comments == nil
+            -#   コメントはまだありません
+            -# コメントがない時にコメントはないと入れたいがエラーが出て表示されない
+      .show-image
+        = image_tag @post.image.url, width: '100%',height:'100%'
   = render "footer"
 

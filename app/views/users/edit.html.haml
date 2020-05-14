@@ -5,6 +5,9 @@
       %h5 アカウントの編集
       = link_to "ログアウト", destroy_user_session_path, method: :delete, class: 'btn'
       = link_to "トップページに戻る", :back, class: 'btn'
+      .edit__icon
+        現在のアイコン
+        = image_tag current_user.image.url, width: '100%',height:'100%', class: "edit__user--circle"
     .account-page__inner--right.user-form
       = form_for(current_user) do |f|
         .field
@@ -14,8 +17,24 @@
             = f.text_field :name, autofocus: true
         .field
           .field-label
+            = f.label :image
+          .field-input
+            = f.file_field :image
+        .field
+          .field-label
             = f.label :email
           .field-input
             = f.email_field :email
+        .field
+          .field-label
+            = f.label :password
+            %i (英数字8文字以上)
+          .field-input
+            = f.password_field :password, autocomplete: "off"
+        .field
+          .field-label
+            = f.label :password_confirmation
+          .field-input
+            = f.password_field :password_confirmation, autocomplete: "off"
         .actions
           = f.submit "Update", class: 'btn'

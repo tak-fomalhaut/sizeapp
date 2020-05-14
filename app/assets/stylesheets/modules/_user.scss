@@ -1,9 +1,10 @@
 .account-page {
+  background-color: #dcdcdc;
   .account-page__inner {
     width: 980px;
     margin: 60px auto;
     padding: 60px;
-    background-color: #fff;
+    background-color: #dcdcdc;
     border: 1px solid #ddd;
     border-radius: 5px;
 
@@ -43,8 +44,9 @@
     .btn {
       margin-top: 20px;
       color: #fff;
-      background-color: #ccc;
+      background-color: #808080;
       font-size: 14px;
+      text-decoration: none;
     }
   }
 
@@ -137,5 +139,15 @@
     margin: 0;
     padding: 0;
     font-size: 13px;
+  }
+}
+
+.edit__icon {
+  margin-top: 30px;
+  height: 300px;
+  width: 300px;
+  object-fit: cover;
+  .edit__user--circle {
+    border-radius: 50%;
   }
 }
