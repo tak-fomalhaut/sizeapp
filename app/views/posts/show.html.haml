@@ -12,7 +12,15 @@
             %li.show_user_icon
               = image_tag @post.user.image.url, width: '100%',height:'100%', class: "show__user--circle"
             %li.show_user_name
-              = link_to @post.user.name, user_path(@post.user), class: "show-user-link"
+              = link_to @post.user.name, user_path(@post.user), class: "show-user-link"             
+            -if current_user.already_liked?(@post)
+              = button_to post_like_path(@post), class: "like-btn", method: :delete do
+                = icon('fas', 'heart', class: "like-icon-off")
+            -else
+              = button_to post_likes_path(@post), class:"like-btn" do
+                = icon('fas', 'heart', class: "like-icon-on")
+            .like-count
+              = @post.likes.count
             -if user_signed_in? && current_user.id == @post.user_id
               %li.show_edit_btn
                 = link_to edit_post_path(@post.id), class: "show_edit-link" do

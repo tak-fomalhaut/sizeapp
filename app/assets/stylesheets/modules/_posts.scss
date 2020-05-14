@@ -418,9 +418,31 @@ content {
               color: slategrey;
             }
           }
+          .like-btn {
+            margin-left: auto;
+            text-decoration: none;
+            line-height: 8vh;
+            background: none;
+            border: none;
+            overflow:visible;
+            cursor:pointer;
+            font-size: 1.6em;
+            height: 8vh;
+            .like-icon-on {
+              color: #afafb0;
+            }
+            .like-icon-off {
+              color: #ff2828;
+            }
+          }
+          .like-count {
+            font-size: 14px;
+            margin: auto 1vw 1vh 0;
+          }
+          
           .show_edit_btn {
             // background-color: #e5a323;
-            margin: 1vh 0 0 auto;
+            margin: 1vh 0 0 1vw;
             .show_edit-link {
               text-decoration: none;
               line-height: 8vh;
@@ -491,3 +513,4 @@ content {
     }
   }
 }
+
