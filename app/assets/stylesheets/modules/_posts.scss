@@ -438,6 +438,10 @@ content {
           .like-count {
             font-size: 14px;
             margin: auto 1vw 1vh 0;
+            &-link {
+              text-decoration: none;
+              color: slategray;
+            }
           }
           
           .show_edit_btn {
@@ -512,5 +516,87 @@ content {
 
     }
   }
+}
+
+.from {
+  width: 100vw;
+  height: 84vh;
+  background-color: #ebf6f7;
+  .from__like {
+    color: slategray;
+    height: 84vh;
+    width: 20vw;
+    margin: 0 auto;
+    overflow: scroll;
+    font-size: 16px;
+    // background-color: ;
+    &__user {
+      margin-top: 10px;
+      display: flex;
+      li {
+        height: 8vh;
+      }
+      .from__like__icon {
+        height: 46px;
+        width: 46px;
+        object-fit: cover;
+        .from__icon__link {
+          border-radius: 50%;
+        }
+      }
+      .from__like__name {
+
+       .from__name__link {
+        text-decoration: none;
+        line-height: 8vh;
+        padding-left: 10px;
+        color: slategrey;
+
+       }
+      }
+    }
+  }
+}
+
+.show__user__page {
+  height: 10vh;
+  width: 74vw;
+  .show__user__details {
+    height: 10vh;
+    width: 50vw;
+    display: flex;
+    margin: 0 auto;
+    &-icon {
+      margin: auto 0;
+      height: 46px;
+      width: 46px;
+      object-fit: cover;
+      .details-icon {
+        border-radius: 50%;
+      }
+    }
+    &-name {
+      line-height: 10vh;
+      padding-left: 10px;
+      color: slategrey;
+
+    }
+    .like-count {
+      color: slategray;
+      line-height: 10vh;
+      margin-left: 40px;
+      &-link {
+        text-decoration: none;
+        color: slategray;
+      }
+    }
+  }
+}
+
+.like-icon-on {
+  color: #afafb0;
+}
+.like-icon-off {
+  color: #ff2828;
 }
 

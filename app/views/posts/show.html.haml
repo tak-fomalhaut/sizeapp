@@ -20,7 +20,7 @@
               = button_to post_likes_path(@post), class:"like-btn" do
                 = icon('fas', 'heart', class: "like-icon-on")
             .like-count
-              = @post.likes.count
+              = link_to @post.likes.count, fromlike_post_path, class: "like-count-link"
             -if user_signed_in? && current_user.id == @post.user_id
               %li.show_edit_btn
                 = link_to edit_post_path(@post.id), class: "show_edit-link" do

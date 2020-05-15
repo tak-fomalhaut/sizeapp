@@ -1,0 +1,15 @@
+.wrapper
+  = render "header"
+  .from
+    .from__like
+      この投稿にいいねした人
+      -@post.liked_users.each do |user|
+        %ul.from__like__user
+          %li.from__like__icon
+            = image_tag user.image.url, width: '100%',height:'100%', class: "from__icon__link"
+          %li.from__like__name
+            = link_to user.name, user_path(@post.user), class: "from__name__link"             
+
+    -# -@post.liked_users.each do |user|
+    -#   = user.name
+  = render "footer"

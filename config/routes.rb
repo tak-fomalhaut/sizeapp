@@ -10,6 +10,9 @@ Rails.application.routes.draw do
   resources :posts do
     resources :comments, only: :create
     resources :likes, only: [:create, :destroy]
+    member do
+      get 'fromlike', 'forlike'
+    end
   end
   resources :users, only: [:edit, :update, :show]
 end

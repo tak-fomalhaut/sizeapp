@@ -7,22 +7,11 @@
         = image_tag @user.image.url, width: '100%',height:'100%', class: "details-icon"
       .show__user__details-name
         = @user.name
-        さんのページ
-      .like-count
-        いいねした数 :
-        = link_to @user.likes.count, forlike_post_path, class: "like-count-link"
+        さんがいいねした投稿
 
-      -# -if current_user.already_liked?(@post)
-      -#   = button_to post_like_path(@post), class: "like-btn", method: :delete do
-      -#     = icon('fas', 'heart', class: "like-icon-off")
-      -# -else
-      -#   = button_to post_likes_path(@post), class:"like-btn" do
-      -#     = icon('fas', 'heart', class: "like-icon-on")
-      -# .like-count
-      -#   = link_to @post.likes.count, from_posts_path
       .show__user__details-like
   %ul.content_search
-    - @posts.each do |post|
+    - @user.liked_posts.each do |post|
       %li.search_post
         = link_to post_path(post.id), method: :get, class: "link__group" do
           .post_image
