@@ -151,3 +151,97 @@
     border-radius: 50%;
   }
 }
+
+
+.show__user__page {
+  height: 10vh;
+  width: 74vw;
+  margin: 0 auto;
+  overflow: scroll;
+  .show__user__details {
+    height: 10vh;
+    display: flex;
+    &-icon {
+      margin: auto 0;
+      height: 46px;
+      width: 46px;
+      object-fit: cover;
+      .details-icon {
+        border-radius: 50%;
+      }
+    }
+    &-name {
+      line-height: 10vh;
+      padding-left: 10px;
+      color: slategrey;
+
+    }
+    .like-count {
+      color: slategray;
+      line-height: 10vh;
+      margin-left: 40px;
+      &-link {
+        text-decoration: none;
+        color: slategray;
+      }
+    }
+    .follow__content {
+      margin-left: 40px;
+      height: 10vh;
+      width: auto;
+      // width: 30vw;
+      line-height: 10vh;
+      display: flex;
+      .follow__box {
+        height: 10vh;
+        // width: 5vw;
+        display: flex;
+        .follow__box__link {
+          height: 10vh;
+          text-decoration: none;
+          color: slategrey;
+          // width: 5vw;
+        }
+        .follow__box__count {
+          margin-left: 6px;
+          color: slategrey;
+
+        }
+        
+      }
+      .follower__box {
+        margin-left: 20px;
+        display: flex;
+        .follower__box__link {
+          text-decoration: none;
+          color: slategrey;
+        }
+        .follower__box__count {
+          margin-left: 6px;
+          color: slategrey;
+        
+        }
+      }
+      .follow_form {
+        margin-left: 20px;
+        .unfollow__btn {
+          text-decoration: none;
+          border: solid 2px #55acee;
+          padding: 7px;
+          color: #55acee;
+          font-size: 14px;
+          // font-weight: bold;
+        }
+        .follow__btn {
+          text-decoration: none;
+          border: solid 2px #55acee;
+          padding: 7px;
+          color: #55acee;
+          font-size: 14px;
+          // font-weight: bold;
+          
+        }
+      }
+    }
+  }
+}

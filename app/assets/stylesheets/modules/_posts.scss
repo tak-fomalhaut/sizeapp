@@ -236,7 +236,7 @@ content {
   .content__box {
     width: 100vw;
     height: 84vh;
-    background-color: honeydew;
+    // background-color: honeydew;
     display: flex;
       // .left-box {
       //   height: 84vh;
@@ -250,7 +250,7 @@ content {
         form {
           width: 50vw;
           height: 84vh;
-          background-color: #3cb371;
+          // background-color: #3cb371;
           text-align: center;
           
           h3 {
@@ -262,18 +262,15 @@ content {
           #title {
             width: 46vw;
             height: 8vh;
-            border: none;
           }
           #image {
             width: 46vw;
             height: 6vh;
-            border: none;
           }
           #text {
             width: 46vw;
             height: 55vh;
             margin-top: 1vh;
-            border: none;
           }
           #send-btn {
             background-color: #25b7c0;
@@ -333,7 +330,7 @@ content {
   .search_post {
     height: 28vh;
     width: 12vw;
-    background-color: #3cb371;
+    // background-color: #3cb371;
     margin: 10px 0 0 10px;
     .link__group {
       text-decoration: none;
@@ -346,7 +343,7 @@ content {
     .post_title {
       height: 3vh;
       width: 12vw;
-      background-color: white;
+      // background-color: white;
       font-size: 12px;     
     }
   }
@@ -358,7 +355,7 @@ content {
   .show_box {
     width: 100vw;
     height: 84vh;
-    background-color: #ebf6f7;
+    // background-color: #ebf6f7;
     display: flex;
 
     .show_details {
@@ -458,9 +455,6 @@ content {
             }
           }
           .show_delete_btn {
-            // background-color: violet;
-            // height: 8vh;
-            // width: 8vw;
             margin: 1vh 1vw 0 1vw;
             .show_delete-link {
               text-decoration: none;
@@ -484,7 +478,7 @@ content {
           font-size: 14px;
           height: 8vh;
           width: 46vw;
-          border: none;
+          // border: none;
         }
         .comment_submit-btn {
           height: 40px;
@@ -521,7 +515,7 @@ content {
 .from {
   width: 100vw;
   height: 84vh;
-  background-color: #ebf6f7;
+  // background-color: #ebf6f7;
   .from__like {
     color: slategray;
     height: 84vh;
@@ -553,41 +547,6 @@ content {
         color: slategrey;
 
        }
-      }
-    }
-  }
-}
-
-.show__user__page {
-  height: 10vh;
-  width: 74vw;
-  .show__user__details {
-    height: 10vh;
-    width: 50vw;
-    display: flex;
-    margin: 0 auto;
-    &-icon {
-      margin: auto 0;
-      height: 46px;
-      width: 46px;
-      object-fit: cover;
-      .details-icon {
-        border-radius: 50%;
-      }
-    }
-    &-name {
-      line-height: 10vh;
-      padding-left: 10px;
-      color: slategrey;
-
-    }
-    .like-count {
-      color: slategray;
-      line-height: 10vh;
-      margin-left: 40px;
-      &-link {
-        text-decoration: none;
-        color: slategray;
       }
     }
   }

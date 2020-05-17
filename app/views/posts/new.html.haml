@@ -5,7 +5,7 @@
       .content__details
         = form_for @post do |f|
           %h3
-            SHARE !
+            投稿ページ
           = f.text_area :title, placeholder: "タイトルを入力", id: "title", autofocus: true
           = f.file_field :image, placeholder: "Image Urlを添付", id: "image"
           = f.text_area :text, placeholder: "コメントを入力", id: "text"

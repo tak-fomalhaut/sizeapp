@@ -15,4 +15,9 @@ Rails.application.routes.draw do
     end
   end
   resources :users, only: [:edit, :update, :show]
+  put 'users/follow/:user_id' => 'users#follow'
+  put 'users/unfollow/:user_id' => 'users#unfollow'
+
+  get 'users/follow_list/:user_id' => 'users#follow_list'
+  get 'users/follower_list/:user_id' => 'users#follower_list'
 end

@@ -11,15 +11,19 @@
       .like-count
         いいねした数 :
         = link_to @user.likes.count, forlike_post_path, class: "like-count-link"
+      .follow__content
+        .follow__box
+          = link_to "フォロー :", {controller: :users,action: :follow_list,user_id: @user.id}, class: "follow__box__link", method: :get
+          .follow__box__count
+            = @user.follow_count
+        .follower__box
+          = link_to "フォロワー :", {controller: :users,action: :follower_list,user_id: @user.id}, class: "follower__box__link", method: :get
+          .follower__box__count
+            = @user.followers_count
+        - if current_user.id != @user.id
+          = render 'follow_form'
 
-      -# -if current_user.already_liked?(@post)
-      -#   = button_to post_like_path(@post), class: "like-btn", method: :delete do
-      -#     = icon('fas', 'heart', class: "like-icon-off")
-      -# -else
-      -#   = button_to post_likes_path(@post), class:"like-btn" do
-      -#     = icon('fas', 'heart', class: "like-icon-on")
-      -# .like-count
-      -#   = link_to @post.likes.count, from_posts_path
+
       .show__user__details-like
   %ul.content_search
     - @posts.each do |post|

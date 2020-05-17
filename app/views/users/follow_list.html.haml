@@ -1,0 +1,13 @@
+.wrapper
+  = render "/posts/header"
+  .from
+    .from__like
+      = @user.name
+      さんがフォローした人
+      - @user.all_following.each do |user|
+        %ul.from__like__user
+          %li.from__like__icon
+            = image_tag user.image.url, width: '100%',height:'100%', class: "from__icon__link"
+          %li.from__like__name
+            = link_to user.name, user_path(user), class: "from__name__link"             
+  = render "/posts/footer"

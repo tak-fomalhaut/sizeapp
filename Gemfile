@@ -73,3 +73,4 @@ gem 'font-awesome-sass'
 gem 'kaminari'
 gem 'carrierwave'
 gem 'mini_magick'
+gem "acts_as_follower", github: "tcocca/acts_as_follower"
