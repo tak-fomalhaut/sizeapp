@@ -47,6 +47,10 @@ class PostsController < ApplicationController
     @posts = user.posts.page(params[:page]).per(20).order("created_at DESC")
   end
 
+  # def gon
+  #   gon.image = @post.image
+  # end
+
   private
   def post_params
     params.require(:post).permit(:title, :text, :image).merge(user_id: current_user.id)

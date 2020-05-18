@@ -21,9 +21,3 @@
             -# = icon('fas', 'heart', class: "like-icon-on")
             = post.liked_users.count
 = paginate(@posts)
-
-
--# <% if current_user.already_liked?(@post) %>
--#   <%= button_to 'いいねを取り消す', post_like_path(@post), method: :delete %>
--# <% else %>
--#   <%= button_to 'いいね', post_likes_path(@post) %>
