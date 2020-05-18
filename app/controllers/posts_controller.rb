@@ -34,8 +34,22 @@ class PostsController < ApplicationController
     @post = Post.find(params[:id])
     @comment = Comment.new
     @comments = @post.comments.includes(:user)
+    @like = Like.new
   end
 
+  def fromlike
+    @post = Post.find(params[:id])
+  end
+
+  def forlike
+    user = User.find(params[:id])
+    @user = user
+    @posts = user.posts.page(params[:page]).per(20).order("created_at DESC")
+  end
+
+  # def gon
+  #   gon.image = @post.image
+  # end
 
   private
   def post_params

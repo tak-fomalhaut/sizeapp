@@ -3,16 +3,12 @@
   %content
     .content__box
       .content__details
-        = form_for @post do |f|
+        = form_with model: @post do |f|
           %h3
-            SHARE !
+            投稿ページ
           = f.text_area :title, placeholder: "タイトルを入力", id: "title", autofocus: true
-          = f.file_field :image, placeholder: "Image Urlを添付", id: "image"
           = f.text_area :text, placeholder: "コメントを入力", id: "text"
+          = f.file_field :image, class: "dropify"
           = f.submit "SEND", id: "send-btn"
-      .right-box
-        チュートリアル
-        .right-box-image
-        jsで画像URL添付したらイメージが出る
   = render "footer"
 

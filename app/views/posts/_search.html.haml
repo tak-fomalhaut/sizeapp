@@ -11,6 +11,13 @@
         .post_image
           = image_tag post.image.url, width: '100%',height:'100%'
           -# %img(src="post.image")
-        .post_title
-          = post.title
+        %ul.post_title
+          %li
+            = post.title
+          %li
+            -# -if current_user.already_liked?(@post)
+            = icon('fas', 'heart', class: "like-icon-off")
+            -# -else
+            -# = icon('fas', 'heart', class: "like-icon-on")
+            = post.liked_users.count
 = paginate(@posts)

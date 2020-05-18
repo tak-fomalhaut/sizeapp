@@ -7,26 +7,11 @@
         = image_tag @user.image.url, width: '100%',height:'100%', class: "details-icon"
       .show__user__details-name
         = @user.name
-        さんのページ
-      .like-count
-        いいねした数 :
-        = link_to @user.likes.count, forlike_post_path, class: "like-count-link"
-      .follow__content
-        .follow__box
-          = link_to "フォロー :", {controller: :users,action: :follow_list,user_id: @user.id}, class: "follow__box__link", method: :get
-          .follow__box__count
-            = @user.follow_count
-        .follower__box
-          = link_to "フォロワー :", {controller: :users,action: :follower_list,user_id: @user.id}, class: "follower__box__link", method: :get
-          .follower__box__count
-            = @user.followers_count
-        - if current_user.id != @user.id
-          = render 'follow_form'
-
+        さんがいいねした投稿
 
       .show__user__details-like
   %ul.content_search
-    - @posts.each do |post|
+    - @user.liked_posts.each do |post|
       %li.search_post
         = link_to post_path(post.id), method: :get, class: "link__group" do
           .post_image

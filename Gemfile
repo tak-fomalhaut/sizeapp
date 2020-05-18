@@ -73,3 +73,7 @@ gem 'font-awesome-sass'
 gem 'kaminari'
 gem 'carrierwave'
 gem 'mini_magick'
+gem "acts_as_follower", github: "tcocca/acts_as_follower"
+gem 'dropify-rails'
+# gem 'gon'
+# gonはdropifyでデフォルト画像設定の際にjsでrailsの変数が使えるということで使ったがダメだった
