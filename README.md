@@ -50,7 +50,7 @@ Post Show
 ### Brand  
 ブランドタグ機能追加  
 ### Size(active_hush)  
-元応サイズなどは投稿時、おおまかな説明の一つとして入力しているがactive_hushを用いて追加  
+現状サイズなどは投稿時、おおまかな説明の一つとして入力しているがactive_hushを用いて追加  
 
 # Database Design
 ## usersテーブル
