@@ -21,11 +21,11 @@ I think that if makers enter the market in the future, they will have a good rel
 TOP PAGE  
 ![トップページ](/app/assets/images/sample_top.png)  
 Post New  
-![投稿ページ](/assets/images/sample_post.png)  
+![投稿ページ](/app/assets/images/sample_post.png)  
 Search Index  
-![検索結果ページ](./assets/images/sample_search.png)  
+![検索結果ページ](/app/assets/images/sample_search.png)  
 Post Show  
-![投稿詳細ページ](./app/assets/images/sample_show.png)  
+![投稿詳細ページ](/app/assets/images/sample_show.png)  
 
 # Database Design
 ## usersテーブル
