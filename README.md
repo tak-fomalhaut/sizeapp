@@ -19,7 +19,7 @@ I think that if makers enter the market in the future, they will have a good rel
 
 # Demo
 TOP PAGE  
-[トップページ](/images/sample_top.jpeg)
+[トップページ]/images/sample_top.jpeg
 
 # Database Design
 ## usersテーブル
