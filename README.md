@@ -1,10 +1,10 @@
-# App name
+# App name アプリ名
 Just me&
 
-# Summary
+# Summary 概要
 With this app, you can share the size of your favorite clothes and search for them.  
 このアプリを使えば好きな洋服のサイズ感を共有したり検索して教えてもらうことができます。  
-### Mounted Function  
+### Mounted Function 実装済み機能  
 User(devise)  
 deviseを用いたユーザー機能  
 Post new,edit,show,destroy(text,image)  
@@ -18,7 +18,7 @@ Like it
 Follow  
 フォロー機能  
 
-# Intention
+# Intention 開発意図
 I've had the experience of failing in size many times because I can't try on clothes when I buy them online.  
 I would like to have a tool that can share information about clothes like sharing information about restaurants.  
 I think that if makers enter the market in the future, they will have a good relationship with shopping sites.  
@@ -30,7 +30,7 @@ I think that if makers enter the market in the future, they will have a good rel
 事実メルカリなどのサイトを見るとせっかく購入したのにサイズが合わなくて新品同様のものを出品している方はとても多いです。  
 メーカーと消費者がWINWINの関係を築けるこのアプリにたくさんのメーカーさんに参入していただければオンラインショッピング業界がさらに盛り上がると思っています。
 
-# Demo
+# Demo 実際の画面イメージ
 TOP PAGE  
 ![トップページ](/app/assets/images/sample_top.png)  
 Post New  
@@ -40,7 +40,7 @@ Search Index
 Post Show  
 ![投稿詳細ページ](/app/assets/images/sample_show.png)  
 
-# Mounting Planned  
+# Mounting Planned 今後実装予定の機能  
 ### Multiple images  
 現状単一の画像のみ投稿、保存されるが複数画像機能を追加  
 ### AJAX  
@@ -52,13 +52,15 @@ Post Show
 ### Size(active_hush)  
 現状サイズなどは投稿時、おおまかな説明の一つとして入力しているがactive_hushを用いて追加  
 
-# Database Design
+# Database Design  データベース設計
 ## usersテーブル
 |Column|Type|Options|
 |------|----|-------|
 |email|string|null: false|
 |password|string|null: false|
-|username|string|null: false|
+|name|string|null: false|
+|image|text|null: false|
+
 ### Association
 - has_many :posts
 - has_many :comments
@@ -75,6 +77,7 @@ Post Show
 |------|----|-------|
 |title|text|null: false|
 |text|text|null: false|
+|image|text|null: false|
 |user_id|integer|null: false, foreign_key: true|
 |size_id|integer|null: false, foreign_key: true|
 ### Association
@@ -106,7 +109,26 @@ Post Show
 |------|----|-------|
 |text|text|null: false|
 |user_id|integer|null: false, foreign_key: true|
-|group_id|integer|null: false, foreign_key: true|
+|post_id|integer|null: false, foreign_key: true|
 ### Association
 - belongs_to :post
 - belongs_to :user
+
+## Likesテーブル
+|Column|Type|Options|
+|------|----|-------|
+|user_id|integer|null: false, foreign_key: true|
+|post_id|integer|null: false, foreign_key: true|
+### Association
+- belongs_to :post
+- belongs_to :user
+
+## Followsテーブル(acts as follower)
+|Column|Type|Options|
+|------|----|-------|
+|blocked|boolean|null: false|
+|follower|integer|null: false, foreign_key: true|
+|followable|integer|null: false, foreign_key: true|
+### Association
+- belongs_to :follower
+- belongs_to :followable
