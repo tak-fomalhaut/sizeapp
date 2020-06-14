@@ -18,7 +18,8 @@ I think that if makers enter the market in the future, they will have a good rel
 メーカーと消費者がWINWINの関係を築けるこのアプリにたくさんのメーカーさんに参入していただければオンラインショッピング業界がさらに盛り上がると思っています。
 
 # Demo
-TOP PAGE
+TOP PAGE  
+[トップページ](./images/sample_image.jpg)
 
 # Database Design
 ## usersテーブル
