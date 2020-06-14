@@ -3,7 +3,20 @@ Just me&
 
 # Summary
 With this app, you can share the size of your favorite clothes and search for them.  
-このアプリを使えば好きな洋服のサイズ感を共有したり検索して教えてもらうことができます。
+このアプリを使えば好きな洋服のサイズ感を共有したり検索して教えてもらうことができます。  
+### Mounted Function  
+User(devise)  
+deviseを用いたユーザー機能  
+Post new,edit,show,destroy(text,image)  
+投稿機能　新規、編集、詳細、削除(textとimage)  
+Comment for Post  
+ユーザーと投稿に紐づいたコメント機能  
+Search(ambiguous keyword)  
+あいまい検索機能  
+Like it  
+いいね機能  
+Follow  
+フォロー機能  
 
 # Intention
 I've had the experience of failing in size many times because I can't try on clothes when I buy them online.  
@@ -26,6 +39,18 @@ Search Index
 ![検索結果ページ](/app/assets/images/sample_search.png)  
 Post Show  
 ![投稿詳細ページ](/app/assets/images/sample_show.png)  
+
+# Mounting Planned  
+### Multiple images  
+現状単一の画像のみ投稿、保存されるが複数画像機能を追加  
+### AJAX  
+現状いいね機能やフォロー機能に非同期通信が設定されていないので追加  
+### Category(ancestry)  
+カテゴリ機能追加  
+### Brand  
+ブランドタグ機能追加  
+### Size(active_hush)  
+元応サイズなどは投稿時、おおまかな説明の一つとして入力しているがactive_hushを用いて追加  
 
 # Database Design
 ## usersテーブル
