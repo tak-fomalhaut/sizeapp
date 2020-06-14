@@ -108,11 +108,15 @@ main {
       &--left {
         // background-color: indianred;
         width: 50vw;
-        // max-height: 100%;
+        background-image: image-url('try.jpeg');
+        background-size: cover;
+        background-position: center;
       }
       &--right {
-        // background-color: khaki;
         width: 50vw;
+        object-fit: contain;
+        background-image: image-url('search1.jpeg');
+        background-size: cover;
       }
     }
     .btn-box {
@@ -331,8 +335,8 @@ content {
     }
     .post_image {
       height: 25vh;
-      width: 12vw;
-      object-fit: contain;
+      // width: 100%;
+      object-fit: cover;
     }
     .post_title {
       height: 3vh;
@@ -355,6 +359,7 @@ content {
     .show_details {
       height: 84vh;
       width: 50vw;
+      
       overflow: scroll;
       // margin: 0 auto;
 
@@ -482,6 +487,7 @@ content {
         .show_comments {
           width: 46vw;
           height: 8vh;
+          margin-top: 2vh;
           .show_comments_box {
             text-align: left;
             padding-bottom: 10px;
@@ -500,6 +506,7 @@ content {
     .show-image {
       height: 84vh;
       width: 50vw;
+      text-align: center;
       overflow: scroll;
 
     }

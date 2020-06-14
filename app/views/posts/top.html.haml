@@ -2,13 +2,9 @@
   = render "header"
   %main
     .main__box
-      -# %img(src="/assets/gray1.jpeg" alt="gray1" width="100%" height="100%")/
       .image__box
         .image__box--left
-          %img(src="/assets/try.png" alt="buy" width="100%" height="100%")/
         .image__box--right
-          %img(src="/assets/search1.png" alt="miss" width="100%" height="100%")/
-          
       .btn-box
         -if user_signed_in?
           .share__box

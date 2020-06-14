@@ -13,7 +13,7 @@
           -# %img(src="post.image")
         %ul.post_title
           %li
-            = post.title
+            = truncate(post.title, length: 14, omission: "..")
           %li
             -# -if current_user.already_liked?(@post)
             = icon('fas', 'heart', class: "like-icon-off")

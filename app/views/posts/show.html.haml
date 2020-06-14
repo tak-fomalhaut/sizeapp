@@ -6,13 +6,14 @@
         .show_title
           = @post.title
         .show_text
-          = @post.text
+          = simple_format(@post.text)
         .show_user
           %ul.show_user_btns
             %li.show_user_icon
               = image_tag @post.user.image.url, width: '100%',height:'100%', class: "show__user--circle"
             %li.show_user_name
-              = link_to @post.user.name, user_path(@post.user), class: "show-user-link"             
+              = link_to @post.user.name, user_path(@post.user), class: "show-user-link"
+            -# = render "likes/like"
             -if current_user.already_liked?(@post)
               = button_to post_like_path(@post), class: "like-btn", method: :delete do
                 = icon('fas', 'heart', class: "like-icon-off")
@@ -33,6 +34,7 @@
             = f.text_area :text, placeholder: "コメントする", rows: "2", class: "comment_text_input"
             = f.submit "SEND", class: "comment_submit-btn"
           .show_comments
+            コメント一覧
             -if @comments
               -@comments.each do |comment|
                 .show_comments_box
@@ -43,6 +45,6 @@
             -# コメントはまだありません
             -# コメントがない時にコメントはないと入れたいがエラーが出て表示されない
       .show-image
-        = image_tag @post.image.url, width: '100%'
+        = image_tag @post.image.url, width: '80%'
   = render "footer"
 
