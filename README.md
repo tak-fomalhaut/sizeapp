@@ -1,5 +1,8 @@
-# App name アプリ名
-Just me&
+# App Name アプリ名
+Just me&  
+
+# Development Environment 開発環境 
+Ruby/Ruby on Rails/MySQL/Github/Visual Studio Code/jquery
 
 # Summary 概要
 With this app, you can share the size of your favorite clothes and search for them.  
