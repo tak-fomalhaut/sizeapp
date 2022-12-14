@@ -122,11 +122,6 @@ GEM
       sassc (>= 1.11)
     globalid (0.4.2)
       activesupport (>= 4.2.0)
-    gon (6.3.2)
-      actionpack (>= 3.0.20)
-      i18n (>= 0.7)
-      multi_json
-      request_store (>= 1.0)
     haml (5.1.2)
       temple (>= 0.8.0)
       tilt
@@ -170,7 +165,7 @@ GEM
       rb-fsevent (~> 0.9, >= 0.9.4)
       rb-inotify (~> 0.9, >= 0.9.7)
       ruby_dep (~> 1.2)
-    loofah (2.5.0)
+    loofah (2.19.1)
       crass (~> 1.0.2)
       nokogiri (>= 1.5.9)
     mail (2.7.1)
@@ -181,14 +176,15 @@ GEM
     mimemagic (0.3.5)
     mini_magick (4.10.1)
     mini_mime (1.0.2)
-    mini_portile2 (2.4.0)
+    mini_portile2 (2.6.1)
     minitest (5.14.0)
     msgpack (1.3.3)
     multi_json (1.14.1)
     mysql2 (0.5.3)
     nio4r (2.5.2)
-    nokogiri (1.10.9)
-      mini_portile2 (~> 2.4.0)
+    nokogiri (1.12.5)
+      mini_portile2 (~> 2.6.1)
+      racc (~> 1.4)
     orm_adapter (0.5.0)
     pry (0.13.1)
       coderay (~> 1.1)
@@ -197,6 +193,7 @@ GEM
       pry (>= 0.10.4)
     public_suffix (4.0.4)
     puma (3.12.4)
+    racc (1.6.1)
     rack (2.2.2)
     rack-test (1.1.0)
       rack (>= 1.0, < 3)
@@ -230,8 +227,6 @@ GEM
     rb-inotify (0.10.1)
       ffi (~> 1.0)
     regexp_parser (1.7.0)
-    request_store (1.5.0)
-      rack (>= 1.4)
     responders (3.0.0)
       actionpack (>= 5.0)
       railties (>= 5.0)
@@ -320,7 +315,6 @@ DEPENDENCIES
   devise
   dropify-rails
   font-awesome-sass
-  gon
   haml-rails
   jbuilder (~> 2.5)
   jquery-rails
